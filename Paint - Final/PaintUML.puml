@@ -1,0 +1,97 @@
+@startuml
+abstract class model.Shape
+annotation java.lang.Override
+class Main
+class com.thoughtworks.xstream.XStream
+class com.thoughtworks.xstream.io.xml.StaxDriver
+class control.BoardListener
+class control.ButtonListener
+class java.awt.BasicStroke
+class java.awt.BorderLayout
+class java.awt.Color
+class java.awt.Graphics
+class java.awt.Graphics2D
+class java.awt.Point
+class java.awt.event.ActionEvent
+class java.awt.event.MouseEvent
+class java.awt.geom.Ellipse2D
+class java.awt.geom.Rectangle2D
+class java.io.File
+class java.io.FileNotFoundException
+class java.io.PrintWriter
+class java.util.ArrayList
+class java.util.Hashtable
+class java.util.Stack
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.swing.Box
+class javax.swing.JButton
+class javax.swing.JFileChooser
+class javax.swing.JFrame
+class javax.swing.JPanel
+class model.Circle
+class model.ResizeActionEnum
+class model.ShapeList
+class paint.BoardPanel
+class paint.Paint
+class view.MainView
+interface java.awt.event.ActionListener
+interface javax.swing.event.MouseInputListener
+model.Shape ..> java.awt.Color
+model.Shape ..> java.awt.Graphics
+model.Shape ..> java.awt.Point
+model.Shape ..> java.awt.geom.Rectangle2D
+Main ..> view.MainView
+control.BoardListener ..> model.Shape
+control.BoardListener ..> java.lang.Override
+control.BoardListener ..> java.awt.Point
+control.BoardListener ..> java.awt.event.MouseEvent
+control.BoardListener ..> java.awt.geom.Rectangle2D
+control.BoardListener ..> java.util.ArrayList
+control.BoardListener ..> java.util.Stack
+control.BoardListener ..> model.Circle
+control.BoardListener ..> model.ShapeList
+control.BoardListener ..> view.MainView
+control.BoardListener --|> javax.swing.event.MouseInputListener
+control.ButtonListener ..> model.Shape
+control.ButtonListener ..> java.lang.Override
+control.ButtonListener ..> com.thoughtworks.xstream.XStream
+control.ButtonListener ..> com.thoughtworks.xstream.io.xml.StaxDriver
+control.ButtonListener ..> java.awt.event.ActionEvent
+control.ButtonListener ..> java.io.File
+control.ButtonListener ..> java.io.FileNotFoundException
+control.ButtonListener ..> java.io.PrintWriter
+control.ButtonListener ..> java.util.ArrayList
+control.ButtonListener ..> java.util.logging.Level
+control.ButtonListener ..> java.util.logging.Logger
+control.ButtonListener ..> javax.swing.JFileChooser
+control.ButtonListener ..> model.ShapeList
+control.ButtonListener ..> view.MainView
+control.ButtonListener --|> java.awt.event.ActionListener
+model.Circle --|> model.Shape
+model.Circle ..> java.lang.Override
+model.Circle ..> java.awt.BasicStroke
+model.Circle ..> java.awt.Color
+model.Circle ..> java.awt.Graphics
+model.Circle ..> java.awt.Graphics2D
+model.Circle ..> java.awt.Point
+model.Circle ..> java.awt.geom.Ellipse2D
+model.Circle ..> java.awt.geom.Rectangle2D
+model.ShapeList ..> java.util.ArrayList
+paint.BoardPanel ..> java.lang.Override
+paint.BoardPanel ..> control.BoardListener
+paint.BoardPanel ..> java.awt.Graphics
+paint.BoardPanel ..> java.awt.Graphics2D
+paint.BoardPanel --|> javax.swing.JPanel
+paint.BoardPanel ..> view.MainView
+view.MainView ..> control.BoardListener
+view.MainView ..> control.ButtonListener
+view.MainView ..> java.awt.BorderLayout
+view.MainView ..> java.awt.Color
+view.MainView ..> java.util.Hashtable
+view.MainView ..> javax.swing.Box
+view.MainView ..> javax.swing.JButton
+view.MainView ..> javax.swing.JFrame
+view.MainView ..> javax.swing.JPanel
+view.MainView ..> paint.BoardPanel
+@enduml
